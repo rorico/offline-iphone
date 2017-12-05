@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0154782D1FD50A6C00CB2237 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0154782C1FD50A6C00CB2237 /* RatingControl.swift */; };
 		01B304401FB698A300EE954B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3043F1FB698A300EE954B /* AppDelegate.swift */; };
 		01B304421FB698A300EE954B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B304411FB698A300EE954B /* ViewController.swift */; };
 		01B304451FB698A300EE954B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B304431FB698A300EE954B /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0154782C1FD50A6C00CB2237 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingControl.swift; path = ../RatingControl.swift; sourceTree = "<group>"; };
 		01B3043C1FB698A300EE954B /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B3043F1FB698A300EE954B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B304411FB698A300EE954B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				01B3043F1FB698A300EE954B /* AppDelegate.swift */,
 				01B304411FB698A300EE954B /* ViewController.swift */,
+				0154782C1FD50A6C00CB2237 /* RatingControl.swift */,
 				01B304431FB698A300EE954B /* Main.storyboard */,
 				01B304461FB698A300EE954B /* Assets.xcassets */,
 				01B304481FB698A300EE954B /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01B304421FB698A300EE954B /* ViewController.swift in Sources */,
+				0154782D1FD50A6C00CB2237 /* RatingControl.swift in Sources */,
 				01B304401FB698A300EE954B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +511,7 @@
 				01B304661FB698A300EE954B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01B304671FB698A300EE954B /* Build configuration list for PBXNativeTarget "TodoTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				01B304691FB698A300EE954B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01B3046A1FB698A300EE954B /* Build configuration list for PBXNativeTarget "TodoUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				01B3046C1FB698A300EE954B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
