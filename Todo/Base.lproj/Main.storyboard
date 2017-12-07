@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X3V-cs-cCh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X3V-cs-cCh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -48,6 +48,7 @@
                                     <outlet property="nameLabel" destination="v7i-4a-7r5" id="43b-KP-Z51"/>
                                     <outlet property="photoImageView" destination="sOX-E4-kzY" id="1rq-yC-fSh"/>
                                     <outlet property="ratingControl" destination="iKt-K9-iQa" id="Sp7-Cj-1v7"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="ZS2-GX-d83"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -180,11 +181,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="id5-69-Nnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1847.2" y="78.710644677661179"/>
+            <point key="canvasLocation" x="1972" y="426"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="137" height="137"/>
         <image name="defaultPhoto" width="137" height="137"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZS2-GX-d83"/>
+    </inferredMetricsTieBreakers>
 </document>
