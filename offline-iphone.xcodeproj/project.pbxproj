@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014F848A1FE22C0B0089ABB2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F84891FE22C0B0089ABB2 /* ShareViewController.swift */; };
+		014F848D1FE22C0B0089ABB2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014F848B1FE22C0B0089ABB2 /* MainInterface.storyboard */; };
+		014F84911FE22C0B0089ABB2 /* Offline.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 014F84871FE22C0B0089ABB2 /* Offline.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		014F84971FE230030089ABB2 /* getData.js in Resources */ = {isa = PBXBuildFile; fileRef = 014F84961FE230030089ABB2 /* getData.js */; };
 		017E0ABD1FD9051700623DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E0ABC1FD9051700623DBE /* AppDelegate.swift */; };
 		017E0ABF1FD9051700623DBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E0ABE1FD9051700623DBE /* ViewController.swift */; };
 		017E0AC21FD9051700623DBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017E0AC01FD9051700623DBE /* Main.storyboard */; };
@@ -14,9 +18,18 @@
 		017E0AC71FD9051700623DBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017E0AC51FD9051700623DBE /* LaunchScreen.storyboard */; };
 		017E0AD21FD9051700623DBE /* offline_iphoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E0AD11FD9051700623DBE /* offline_iphoneTests.swift */; };
 		017E0ADD1FD9051700623DBE /* offline_iphoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E0ADC1FD9051700623DBE /* offline_iphoneUITests.swift */; };
+		01E8B0FD1FE3A085004007FD /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E8B0FC1FE3A085004007FD /* Site.swift */; };
+		01E8B0FE1FE3A0C2004007FD /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E8B0FC1FE3A085004007FD /* Site.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		014F848F1FE22C0B0089ABB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 017E0AB11FD9051700623DBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 014F84861FE22C0B0089ABB2;
+			remoteInfo = Offline;
+		};
 		017E0ACE1FD9051700623DBE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 017E0AB11FD9051700623DBE /* Project object */;
@@ -33,7 +46,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		014F84951FE22C0B0089ABB2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				014F84911FE22C0B0089ABB2 /* Offline.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		014F84871FE22C0B0089ABB2 /* Offline.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Offline.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		014F84891FE22C0B0089ABB2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		014F848C1FE22C0B0089ABB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		014F848E1FE22C0B0089ABB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		014F84961FE230030089ABB2 /* getData.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = getData.js; sourceTree = "<group>"; };
 		017E0AB91FD9051700623DBE /* offline-iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "offline-iphone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		017E0ABC1FD9051700623DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		017E0ABE1FD9051700623DBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,9 +79,17 @@
 		017E0AD81FD9051700623DBE /* offline-iphoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "offline-iphoneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		017E0ADC1FD9051700623DBE /* offline_iphoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offline_iphoneUITests.swift; sourceTree = "<group>"; };
 		017E0ADE1FD9051700623DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01E8B0FC1FE3A085004007FD /* Site.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Site.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		014F84841FE22C0B0089ABB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		017E0AB61FD9051700623DBE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,12 +114,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014F84881FE22C0B0089ABB2 /* Offline */ = {
+			isa = PBXGroup;
+			children = (
+				014F84891FE22C0B0089ABB2 /* ShareViewController.swift */,
+				014F848B1FE22C0B0089ABB2 /* MainInterface.storyboard */,
+				014F848E1FE22C0B0089ABB2 /* Info.plist */,
+				014F84961FE230030089ABB2 /* getData.js */,
+			);
+			path = Offline;
+			sourceTree = "<group>";
+		};
 		017E0AB01FD9051700623DBE = {
 			isa = PBXGroup;
 			children = (
 				017E0ABB1FD9051700623DBE /* offline-iphone */,
 				017E0AD01FD9051700623DBE /* offline-iphoneTests */,
 				017E0ADB1FD9051700623DBE /* offline-iphoneUITests */,
+				014F84881FE22C0B0089ABB2 /* Offline */,
 				017E0ABA1FD9051700623DBE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +142,7 @@
 				017E0AB91FD9051700623DBE /* offline-iphone.app */,
 				017E0ACD1FD9051700623DBE /* offline-iphoneTests.xctest */,
 				017E0AD81FD9051700623DBE /* offline-iphoneUITests.xctest */,
+				014F84871FE22C0B0089ABB2 /* Offline.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +152,7 @@
 			children = (
 				017E0ABC1FD9051700623DBE /* AppDelegate.swift */,
 				017E0ABE1FD9051700623DBE /* ViewController.swift */,
+				01E8B0FC1FE3A085004007FD /* Site.swift */,
 				017E0AC01FD9051700623DBE /* Main.storyboard */,
 				017E0AC31FD9051700623DBE /* Assets.xcassets */,
 				017E0AC51FD9051700623DBE /* LaunchScreen.storyboard */,
@@ -128,6 +182,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		014F84861FE22C0B0089ABB2 /* Offline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 014F84941FE22C0B0089ABB2 /* Build configuration list for PBXNativeTarget "Offline" */;
+			buildPhases = (
+				014F84831FE22C0B0089ABB2 /* Sources */,
+				014F84841FE22C0B0089ABB2 /* Frameworks */,
+				014F84851FE22C0B0089ABB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Offline;
+			productName = Offline;
+			productReference = 014F84871FE22C0B0089ABB2 /* Offline.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		017E0AB81FD9051700623DBE /* offline-iphone */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 017E0AE11FD9051700623DBE /* Build configuration list for PBXNativeTarget "offline-iphone" */;
@@ -135,10 +206,12 @@
 				017E0AB51FD9051700623DBE /* Sources */,
 				017E0AB61FD9051700623DBE /* Frameworks */,
 				017E0AB71FD9051700623DBE /* Resources */,
+				014F84951FE22C0B0089ABB2 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				014F84901FE22C0B0089ABB2 /* PBXTargetDependency */,
 			);
 			name = "offline-iphone";
 			productName = "offline-iphone";
@@ -191,8 +264,14 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Daniel Chen";
 				TargetAttributes = {
+					014F84861FE22C0B0089ABB2 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 23MA3L6N87;
+						ProvisioningStyle = Automatic;
+					};
 					017E0AB81FD9051700623DBE = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 23MA3L6N87;
 						ProvisioningStyle = Automatic;
 					};
 					017E0ACC1FD9051700623DBE = {
@@ -223,11 +302,21 @@
 				017E0AB81FD9051700623DBE /* offline-iphone */,
 				017E0ACC1FD9051700623DBE /* offline-iphoneTests */,
 				017E0AD71FD9051700623DBE /* offline-iphoneUITests */,
+				014F84861FE22C0B0089ABB2 /* Offline */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		014F84851FE22C0B0089ABB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				014F84971FE230030089ABB2 /* getData.js in Resources */,
+				014F848D1FE22C0B0089ABB2 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		017E0AB71FD9051700623DBE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,11 +344,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		014F84831FE22C0B0089ABB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01E8B0FE1FE3A0C2004007FD /* Site.swift in Sources */,
+				014F848A1FE22C0B0089ABB2 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		017E0AB51FD9051700623DBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				017E0ABF1FD9051700623DBE /* ViewController.swift in Sources */,
+				01E8B0FD1FE3A085004007FD /* Site.swift in Sources */,
 				017E0ABD1FD9051700623DBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +382,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		014F84901FE22C0B0089ABB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 014F84861FE22C0B0089ABB2 /* Offline */;
+			targetProxy = 014F848F1FE22C0B0089ABB2 /* PBXContainerItemProxy */;
+		};
 		017E0ACF1FD9051700623DBE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 017E0AB81FD9051700623DBE /* offline-iphone */;
@@ -296,6 +400,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		014F848B1FE22C0B0089ABB2 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				014F848C1FE22C0B0089ABB2 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		017E0AC01FD9051700623DBE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -315,6 +427,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		014F84921FE22C0B0089ABB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 23MA3L6N87;
+				INFOPLIST_FILE = Offline/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "rorico.offline-iphone.Offline";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		014F84931FE22C0B0089ABB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 23MA3L6N87;
+				INFOPLIST_FILE = Offline/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "rorico.offline-iphone.Offline";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		017E0ADF1FD9051700623DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -413,7 +551,9 @@
 		017E0AE21FD9051700623DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 23MA3L6N87;
 				INFOPLIST_FILE = "offline-iphone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rorico.offline-iphone";
@@ -425,7 +565,9 @@
 		017E0AE31FD9051700623DBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 23MA3L6N87;
 				INFOPLIST_FILE = "offline-iphone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rorico.offline-iphone";
@@ -491,6 +633,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		014F84941FE22C0B0089ABB2 /* Build configuration list for PBXNativeTarget "Offline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				014F84921FE22C0B0089ABB2 /* Debug */,
+				014F84931FE22C0B0089ABB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		017E0AB41FD9051700623DBE /* Build configuration list for PBXProject "offline-iphone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -507,6 +658,7 @@
 				017E0AE31FD9051700623DBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		017E0AE41FD9051700623DBE /* Build configuration list for PBXNativeTarget "offline-iphoneTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +667,7 @@
 				017E0AE61FD9051700623DBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		017E0AE71FD9051700623DBE /* Build configuration list for PBXNativeTarget "offline-iphoneUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +676,7 @@
 				017E0AE91FD9051700623DBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

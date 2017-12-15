@@ -10,9 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+    
+    var sites = [Site]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        sites = NSKeyedUnarchiver.unarchiveObject(withFile: Site.ArchiveURL.path) as? [Site] ?? []
+        print(sites)
+        if (sites.count == 0) {
+            return
+        }
+        webView.loadHTMLString(sites[0].html, baseURL: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {

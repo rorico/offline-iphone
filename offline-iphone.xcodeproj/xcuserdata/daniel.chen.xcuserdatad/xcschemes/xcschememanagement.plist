@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Offline.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>offline-iphone.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>014F84861FE22C0B0089ABB2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>017E0AB81FD9051700623DBE</key>
 		<dict>
 			<key>primary</key>
