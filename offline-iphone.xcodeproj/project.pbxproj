@@ -61,6 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		013E54721FE5B0B100F5CACF /* offline-iphone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "offline-iphone.entitlements"; sourceTree = "<group>"; };
+		013E54731FE5B0B800F5CACF /* Offline.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Offline.entitlements; sourceTree = "<group>"; };
 		014F84871FE22C0B0089ABB2 /* Offline.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Offline.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		014F84891FE22C0B0089ABB2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		014F848C1FE22C0B0089ABB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		014F84881FE22C0B0089ABB2 /* Offline */ = {
 			isa = PBXGroup;
 			children = (
+				013E54731FE5B0B800F5CACF /* Offline.entitlements */,
 				014F84891FE22C0B0089ABB2 /* ShareViewController.swift */,
 				014F848B1FE22C0B0089ABB2 /* MainInterface.storyboard */,
 				014F848E1FE22C0B0089ABB2 /* Info.plist */,
@@ -150,6 +153,7 @@
 		017E0ABB1FD9051700623DBE /* offline-iphone */ = {
 			isa = PBXGroup;
 			children = (
+				013E54721FE5B0B100F5CACF /* offline-iphone.entitlements */,
 				017E0ABC1FD9051700623DBE /* AppDelegate.swift */,
 				017E0ABE1FD9051700623DBE /* ViewController.swift */,
 				01E8B0FC1FE3A085004007FD /* Site.swift */,
@@ -268,11 +272,21 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 23MA3L6N87;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					017E0AB81FD9051700623DBE = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 23MA3L6N87;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					017E0ACC1FD9051700623DBE = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -430,6 +444,7 @@
 		014F84921FE22C0B0089ABB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Offline/Offline.entitlements;
 				DEVELOPMENT_TEAM = 23MA3L6N87;
 				INFOPLIST_FILE = Offline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -443,6 +458,7 @@
 		014F84931FE22C0B0089ABB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Offline/Offline.entitlements;
 				DEVELOPMENT_TEAM = 23MA3L6N87;
 				INFOPLIST_FILE = Offline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -553,6 +569,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "offline-iphone/offline-iphone.entitlements";
 				DEVELOPMENT_TEAM = 23MA3L6N87;
 				INFOPLIST_FILE = "offline-iphone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -567,6 +584,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "offline-iphone/offline-iphone.entitlements";
 				DEVELOPMENT_TEAM = 23MA3L6N87;
 				INFOPLIST_FILE = "offline-iphone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

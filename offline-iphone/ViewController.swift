@@ -16,9 +16,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        sites = NSKeyedUnarchiver.unarchiveObject(withFile: Site.ArchiveURL.path) as? [Site] ?? []
-        print(sites)
+        
+        let defaults = UserDefaults(suiteName: "group.offline")
+        defaults?.synchronize()
+        let decoded = defaults?.object(forKey: "sites") as? Data
+        sites = []
+        if (decoded != nil) {
+            NSKeyedUnarchiver.setClass(Site.self, forClassName: "Site")
+            sites = NSKeyedUnarchiver.unarchiveObject(with: decoded!) as? [Site] ?? []
+        }
         if (sites.count == 0) {
             return
         }
