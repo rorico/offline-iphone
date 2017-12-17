@@ -11,20 +11,30 @@ import UIKit
 class SiteTableViewController: UITableViewController {
     
     var sites = [Site]()
+    let defaults = UserDefaults(suiteName: "group.offline")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaults = UserDefaults(suiteName: "group.offline")
+        navigationItem.leftBarButtonItem = editButtonItem
+        
+        NSKeyedUnarchiver.setClass(Site.self, forClassName: "Site")
+        NSKeyedArchiver.setClassName("Site", for: Site.self)
+        
+        sites = []
+        
         defaults?.synchronize()
         let decoded = defaults?.object(forKey: "sites") as? Data
-        sites = []
-        let newS = Site(name: "test", html: "tests")
-        sites.append(newS!)
         if (decoded != nil) {
             NSKeyedUnarchiver.setClass(Site.self, forClassName: "Site")
             sites = NSKeyedUnarchiver.unarchiveObject(with: decoded!) as? [Site] ?? []
         }
+        
+        if (sites.count == 0) {
+            let newS = Site(name: "test", html: "tests")
+            sites.append(newS!)
+        }
+        
         if (sites.count > 0) {
             self.performSegue(withIdentifier: "show", sender: sites[0])
         }
@@ -60,20 +70,19 @@ class SiteTableViewController: UITableViewController {
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return false
+        return true
     }
     
-    /*
      // Override to support editing the table view.
      override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        if editingStyle == .delete {
+            sites.remove(at: indexPath.row)
+            self.save()
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
      }
-     }
-     */
     
     /*
      // Override to support rearranging the table view.
@@ -114,4 +123,9 @@ class SiteTableViewController: UITableViewController {
         }
     }
     
+    private func save() {
+        let encoded = NSKeyedArchiver.archivedData(withRootObject: sites)
+        defaults?.set(encoded, forKey: "sites")
+        defaults?.synchronize()
+    }
 }
