@@ -25,6 +25,9 @@ class SiteTableViewController: UITableViewController {
             NSKeyedUnarchiver.setClass(Site.self, forClassName: "Site")
             sites = NSKeyedUnarchiver.unarchiveObject(with: decoded!) as? [Site] ?? []
         }
+        if (sites.count > 0) {
+            self.performSegue(withIdentifier: "show", sender: sites[0])
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -97,14 +100,18 @@ class SiteTableViewController: UITableViewController {
         guard let controller = segue.destination as? ViewController else {
             fatalError("Unexpected destination: \(segue.destination)")
         }
-        guard let selected = sender as? SiteTableViewCell else {
-            fatalError("Unexpected sender: \(String(describing: sender))")
+        if let site = sender as? Site {
+            controller.site = site
+        } else {
+            guard let selected = sender as? SiteTableViewCell else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            guard let indexPath = tableView.indexPath(for: selected) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            let selectedSite = sites[indexPath.row]
+            controller.site = selectedSite
         }
-        guard let indexPath = tableView.indexPath(for: selected) else {
-            fatalError("The selected cell is not being displayed by the table")
-        }
-        let selectedMeal = sites[indexPath.row]
-        controller.site = selectedMeal
     }
     
 }
