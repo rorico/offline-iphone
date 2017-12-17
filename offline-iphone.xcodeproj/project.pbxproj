@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012C7EEA1FE60B4100C4FFE9 /* SiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C7EE91FE60B4100C4FFE9 /* SiteTableViewCell.swift */; };
+		012C7EEC1FE60B4A00C4FFE9 /* SiteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C7EEB1FE60B4A00C4FFE9 /* SiteTableViewController.swift */; };
 		014F848A1FE22C0B0089ABB2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F84891FE22C0B0089ABB2 /* ShareViewController.swift */; };
 		014F848D1FE22C0B0089ABB2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014F848B1FE22C0B0089ABB2 /* MainInterface.storyboard */; };
 		014F84911FE22C0B0089ABB2 /* Offline.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 014F84871FE22C0B0089ABB2 /* Offline.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -61,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		012C7EE91FE60B4100C4FFE9 /* SiteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteTableViewCell.swift; sourceTree = "<group>"; };
+		012C7EEB1FE60B4A00C4FFE9 /* SiteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteTableViewController.swift; sourceTree = "<group>"; };
 		013E54721FE5B0B100F5CACF /* offline-iphone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "offline-iphone.entitlements"; sourceTree = "<group>"; };
 		013E54731FE5B0B800F5CACF /* Offline.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Offline.entitlements; sourceTree = "<group>"; };
 		014F84871FE22C0B0089ABB2 /* Offline.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Offline.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +162,8 @@
 				017E0ABE1FD9051700623DBE /* ViewController.swift */,
 				01E8B0FC1FE3A085004007FD /* Site.swift */,
 				017E0AC01FD9051700623DBE /* Main.storyboard */,
+				012C7EE91FE60B4100C4FFE9 /* SiteTableViewCell.swift */,
+				012C7EEB1FE60B4A00C4FFE9 /* SiteTableViewController.swift */,
 				017E0AC31FD9051700623DBE /* Assets.xcassets */,
 				017E0AC51FD9051700623DBE /* LaunchScreen.storyboard */,
 				017E0AC81FD9051700623DBE /* Info.plist */,
@@ -373,6 +379,8 @@
 			files = (
 				017E0ABF1FD9051700623DBE /* ViewController.swift in Sources */,
 				01E8B0FD1FE3A085004007FD /* Site.swift in Sources */,
+				012C7EEA1FE60B4100C4FFE9 /* SiteTableViewCell.swift in Sources */,
+				012C7EEC1FE60B4A00C4FFE9 /* SiteTableViewController.swift in Sources */,
 				017E0ABD1FD9051700623DBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

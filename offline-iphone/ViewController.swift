@@ -12,31 +12,21 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
     
-    var sites = [Site]()
+    var site: Site?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaults = UserDefaults(suiteName: "group.offline")
-        defaults?.synchronize()
-        let decoded = defaults?.object(forKey: "sites") as? Data
-        sites = []
-        if (decoded != nil) {
-            NSKeyedUnarchiver.setClass(Site.self, forClassName: "Site")
-            sites = NSKeyedUnarchiver.unarchiveObject(with: decoded!) as? [Site] ?? []
+        webView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        if let site = site {
+            navigationItem.title = site.name
+            webView.loadHTMLString(site.html, baseURL: nil)
         }
-        if (sites.count == 0) {
-            return
-        }
-        webView.loadHTMLString(sites[0].html, baseURL: nil)
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
