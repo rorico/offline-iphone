@@ -33,6 +33,10 @@ class SiteTableViewController: UITableViewController {
         if (sites.count == 0) {
             let newS = Site(name: "test", html: "tests")
             sites.append(newS!)
+            let newS2 = Site(name: "test2", html: "tests")
+            sites.append(newS2!)
+            let newS3 = Site(name: "test3", html: "tests")
+            sites.append(newS3!)
         }
         
         if (sites.count > 0) {
@@ -73,8 +77,8 @@ class SiteTableViewController: UITableViewController {
         return true
     }
     
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             sites.remove(at: indexPath.row)
             self.save()
@@ -82,23 +86,20 @@ class SiteTableViewController: UITableViewController {
         } else if editingStyle == .insert {
          // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
-     }
+    }
     
-    /*
      // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        sites.insert(sites.remove(at: fromIndexPath.row), at: to.row)
+        self.save()
+    }
     
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
+    // Override to support conditional rearranging of the table view.
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
+
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
